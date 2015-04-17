@@ -15,7 +15,10 @@ while (playagain):
     # Loop for CPU guesses
     while (not guessed):
         tries = tries + 1
-        guess = (highest + lowest)//2
+        if (highest == 100 and lowest == 99):
+            guess = 100
+        else:
+            guess = (highest + lowest)//2
         answer = input("Is it " + str(guess) + "? (yes/no) ")
         if (answer == "no"):
             answer = input("Is the number larger than " + str(guess) + "? ")
