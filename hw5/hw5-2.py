@@ -1,6 +1,6 @@
 import urllib.request
 from urllib.error import  URLError
-import json
+05import json
 import ssl
 
 ccode = input("Enter a country code: ")
