@@ -2,7 +2,7 @@ import sqlite3
 from wsgiref.simple_server import make_server
 
 def add_to_db(form_vals):
-	conn = sqlite3.connect("zoo.sqlite") 
+	conn = sqlite3.connect("puzzle.sqlite") 
 	cursor = conn.cursor() 
 	cursor.execute("insert into animal_count(name, count) values(?, ?)", (form_vals["animal"], form_vals["count"])) 
 	# Print table to the console to make sure animal was added
